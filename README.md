@@ -17,3 +17,19 @@ What does the code do? Eventually the program will control and track dual elevat
 
 I changed four lines of code to correct syntax errors. Below is a description of the code changes made for the prelab:
 
+Bad code:
+
+nibble0 <= 
+nibble1 <= 
+nibble2 <= 
+nibble3 <= 
+
+Good Code: 
+
+nibble0 <= "0000",
+nibble1 <= "0000",
+nibble2 <= "0000",
+nibble3 <= "0000";
+
+The bad code ahad undeclared signals/inputs. I corrected this error by assigning nibble(0:3) values of zero until I know what values they should be. Doing this prevented all syntax errors. I looked through the code of the nexys2_top_shell and did not spot any other immediate coding errors for the pre-lab.
+
