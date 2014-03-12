@@ -13,7 +13,7 @@ Internal Inputs: btw(3:0) which inputs nibble(0:3) to nibble_to_sseg / clk which
 Outputs: SSEG_AN(3:0), SSEG(7:0), and LED(7:0)
 internal outputs: nibble_to_sseg outputs sseg(0:3) to the nexys2_sseg / the nexys2_sseg outputs select to SSEG_AN(3:0) and sseg to SSEG(7:0) / clk_div outputs clkbus_sig(26downto19) to LED(7:0)
 
-What does the code do?
+What does the code do? Eventually the program will control and track dual elevators. The LEDs will show which floor they are on. I am still unsure of the detailed functionality of this lab.
 
-I changed four lines of code to correct syntax errors. I am still very unsure of the functionality of the code. Below is a description of the code changes made for the prelab:
+I changed four lines of code to correct syntax errors. Below is a description of the code changes made for the prelab:
 
