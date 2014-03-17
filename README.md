@@ -5,7 +5,7 @@ Lab 3
 
 The schematic to the nexys2_top_shelf is below (multiple copies were uploaded with different names. Github was denying my requsts to upload. However, github actually allowed the uploads to occur resulting in multiple copies):
 
-![Scehmatic] (https://raw.github.com/John-Rios/ECE281_Lab3/master/PreLab3_Schematic_Rios.jpg)
+![Scehmatic] (https://raw.github.com/John-Rios/ECE281_Lab3/master/PreLab3_Schematic.jpg)
 
 Inputs: btw(3:0) / clk_50m / switch(7:0)
 Internal Inputs: btw(3:0) which inputs nibble(0:3) to nibble_to_sseg / clk which is an input to nexys2_sseg and clk_div / sseg(0:3) which is an input to the nexys2_sseg / reset which is an input to nexys2_sseg
