@@ -27,6 +27,138 @@ Code Critique:
 
 (Moore Shell) 
 
+Moore Bad Code 1:
+
+-- Company: USAFA/DFEC
+-- Engineer: Silva
+-- 
+-- Create Date:    	10:33:47 07/07/2012 
+-- Design Name:		CE3
+-- Module Name:    	MooreElevatorController_Shell - Behavioral 
+-- Description: 		Shell for completing CE3
+--
+			
+This code is the introduction/heading for the code and is supposed to describe what the code is to accomplish, who wrote it, and provide basic information like when it was last updated and the name of the module. The description is poor and offers no insight into the function of the code. 
+
+Moore Good Code 1: 
+
+-- Company: USAFA/DFEC
+-- Engineer: Silva
+-- 
+-- Create Date:    	10:33:47 07/07/2012 
+-- Design Name:		  CE3
+-- Module Name:    	MooreElevatorController_Shell - Behavioral 
+-- Description: 		Shell for completing CE3. This shell was created to guide cadets to creating code that will control --                  an elevator with basic functionaility. The elevator will move up or down based on a single input and --                  will stop when a second input is provided. 
+--
+
+This code was improved because now the reader understands what the code is supposed to accomplish. Understanding the purpose and the background of the code makes understanding the code much easier. 
+
+Moore Bad Code 2: 
+
+floor_state_machine: process(clk)
+begin
+	--clk'event and clk='1' is VHDL-speak for a rising edge
+	if clk'event and clk='1' then
+		if reset='1' then
+			floor_state <= floor1;
+		else
+			case floor_state is
+				when floor1 =>
+					if (up_down='1' and stop='0') then 
+					  floor_state <= floor2;
+					else
+						floor_state <= floor1;
+					end if;
+					
+Reset is not included in the sensitivity list. 
+
+Moore Good code 2: 
+
+floor_state_machine: process(clk, reset)
+begin
+	--clk'event and clk='1' is VHDL-speak for a rising edge
+	if clk'event and clk='1' then
+		if reset='1' then
+			floor_state <= floor1;
+		else
+			case floor_state is
+				when floor1 =>
+					if (up_down='1' and stop='0') then 
+					  floor_state <= floor2;
+					else
+						floor_state <= floor1;
+					end if;
+					
+Reset is now included in the sensitivity list. the rest of the code is good. the code guards against creating unwanted memory and phanton states. 
+
+(Mealy Shell) 
+
+Mealy Bad Code 1:
+
+-- Company: USAFA/DFEC
+-- Engineer: Silva
+-- 
+-- Create Date:    10:33:47 07/07/2012 
+-- Design Name: 
+-- Module Name:    MealyElevatorController_Silva - Behavioral 
+-- Project Name: 
+-- Target Devices: 
+-- Tool versions: 
+-- Description: 
+--
+-- Dependencies: 
+--
+-- Revision: 
+-- Revision 0.01 - File Created
+-- Additional Comments: 
+			
+This code is the introduction/heading for the code and is supposed to describe what the code is to accomplish, who wrote it, and provide basic information like when it was last updated and the name of the module. There is no description, design name, project name, ect. 
+
+Mealy Good Code 1: 
+
+-- Company: USAFA/DFEC
+-- Engineer: Silva
+-- 
+-- Create Date:    10:33:47 07/07/2012 
+-- Design Name:    Mealy Elevator Controller Shell
+-- Module Name:    MealyElevatorController_Silva - Behavioral 
+-- Project Name: CE3
+-- Target Devices: 
+-- Tool versions: 
+-- Description: Shell for completing CE3. This shell was created to guide cadets to creating code that will control 
+--              an elevator with basic functionaility. The elevator will move up or down based on a single input and 
+--              will stop when a second input is provided. 
+--
+-- Dependencies: 
+--
+-- Revision: 
+-- Revision 0.01 - File Created
+-- Additional Comments: 
+
+This code was improved because now the reader understands what the code is supposed to accomplish. Understanding the purpose and the background of the code makes understanding the code much easier. 
+
+Mealy Bad Code 2: 
+
+floor_state_machine: process(clk)
+begin
+--Insert your state machine below:
+
+end process;
+					
+Reset is not included in the sensitivity list. 
+
+Mealy Good code 2: 
+
+floor_state_machine: process(clk,reset)
+begin
+--Insert your state machine below:
+
+end process;
+					
+Reset is now included in the sensitivity list. the rest of the code is good. the code guards against creating unwanted memory and phanton states. 
 
 
+Overall Code Critique:
+
+The code for both modules was very similar with the exceptions of the outputs. Most of the code was left blank which does not leave room for much critiquing. I attempted to spot as many errors as possible. I did not include the code which had unassigned outputs or if statements because these were intentionally left blank. The student was meant to fill in the code so therefore it was not an error and required no critique. 
 
