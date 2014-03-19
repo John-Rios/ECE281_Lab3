@@ -31,12 +31,12 @@ Moore Bad Code 1:
 
 -- Company: USAFA/DFEC
 -- Engineer: Silva
--- 
+ 
 -- Create Date:    	10:33:47 07/07/2012 
 -- Design Name:		CE3
 -- Module Name:    	MooreElevatorController_Shell - Behavioral 
 -- Description: 		Shell for completing CE3
---
+
 			
 This code is the introduction/heading for the code and is supposed to describe what the code is to accomplish, who wrote it, and provide basic information like when it was last updated and the name of the module. The description is poor and offers no insight into the function of the code. 
 
@@ -44,12 +44,14 @@ Moore Good Code 1:
 
 -- Company: USAFA/DFEC
 -- Engineer: Silva
--- 
+ 
 -- Create Date:    	10:33:47 07/07/2012 
 -- Design Name:		  CE3
--- Module Name:    	MooreElevatorController_Shell - Behavioral 
--- Description: 		Shell for completing CE3. This shell was created to guide cadets to creating code that will control --                  an elevator with basic functionaility. The elevator will move up or down based on a single input and --                  will stop when a second input is provided. 
---
+-- Module Name:   MooreElevatorController_Shell - Behavioral 
+-- Description: Shell for completing CE3. This shell was created to guide cadets to creating code that will control 
+--              an elevator with basic functionaility. The elevator will move up or down based on a single input and 
+--              will stop when a second input is provided. 
+
 
 This code was improved because now the reader understands what the code is supposed to accomplish. Understanding the purpose and the background of the code makes understanding the code much easier. 
 
@@ -57,7 +59,7 @@ Moore Bad Code 2:
 
 floor_state_machine: process(clk)
 begin
-	--clk'event and clk='1' is VHDL-speak for a rising edge
+	clk'event and clk='1' is VHDL-speak for a rising edge
 	if clk'event and clk='1' then
 		if reset='1' then
 			floor_state <= floor1;
@@ -76,7 +78,7 @@ Moore Good code 2:
 
 floor_state_machine: process(clk, reset)
 begin
-	--clk'event and clk='1' is VHDL-speak for a rising edge
+	clk'event and clk='1' is VHDL-speak for a rising edge
 	if clk'event and clk='1' then
 		if reset='1' then
 			floor_state <= floor1;
@@ -97,7 +99,7 @@ Mealy Bad Code 1:
 
 -- Company: USAFA/DFEC
 -- Engineer: Silva
--- 
+
 -- Create Date:    10:33:47 07/07/2012 
 -- Design Name: 
 -- Module Name:    MealyElevatorController_Silva - Behavioral 
@@ -105,9 +107,7 @@ Mealy Bad Code 1:
 -- Target Devices: 
 -- Tool versions: 
 -- Description: 
---
 -- Dependencies: 
---
 -- Revision: 
 -- Revision 0.01 - File Created
 -- Additional Comments: 
@@ -118,7 +118,7 @@ Mealy Good Code 1:
 
 -- Company: USAFA/DFEC
 -- Engineer: Silva
--- 
+
 -- Create Date:    10:33:47 07/07/2012 
 -- Design Name:    Mealy Elevator Controller Shell
 -- Module Name:    MealyElevatorController_Silva - Behavioral 
@@ -126,11 +126,11 @@ Mealy Good Code 1:
 -- Target Devices: 
 -- Tool versions: 
 -- Description: Shell for completing CE3. This shell was created to guide cadets to creating code that will control 
---              an elevator with basic functionaility. The elevator will move up or down based on a single input and 
---              will stop when a second input is provided. 
---
+             an elevator with basic functionaility. The elevator will move up or down based on a single input and 
+             will stop when a second input is provided. 
+
 -- Dependencies: 
---
+
 -- Revision: 
 -- Revision 0.01 - File Created
 -- Additional Comments: 
